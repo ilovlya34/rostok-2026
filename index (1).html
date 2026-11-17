@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#24583D">
+  <meta name="description" content="Программа муниципального фестиваля ученических и учительских проектов «Росток 2026».">
+  <title>Росток 2026 — Программа фестиваля</title>
+  <style>
+    :root {
+      --green-dark:#24583D; --green:#3F7952; --page:#F5F7F5;
+      --card:#FFFFFF; --green-light:#EAF2EA; --text:#26332B;
+      --muted:#66736A; --line:#DCE6DD; --shadow:0 8px 24px rgba(36,88,61,.07);
+      --radius:16px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--page);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.6}
+    .hero{position:relative;overflow:hidden;padding:clamp(42px,7vw,78px) 20px;color:#fff;text-align:center;background:var(--green-dark)}
+    .hero:before,.hero:after{content:"";position:absolute;width:230px;height:230px;border:1px solid rgba(255,255,255,.12);border-radius:50%;pointer-events:none}
+    .hero:before{top:-145px;left:-65px}.hero:after{right:-85px;bottom:-165px;width:300px;height:300px}
+    .hero-inner{position:relative;z-index:1;max-width:1000px;margin:auto}
+    .eyebrow{margin:0 0 12px;color:#D9E9DC;font-size:.82rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+    h1{max-width:920px;margin:0 auto;font-size:clamp(1.8rem,4.5vw,3.25rem);line-height:1.18;font-weight:750;text-wrap:balance}
+    .hero-subtitle{margin:18px 0 0;color:#E5EFE7;font-size:clamp(.98rem,2vw,1.12rem)}
+    main{width:min(1120px,calc(100% - 36px));margin:auto;padding:42px 0 72px}
+    .section-heading{margin:0 0 28px;text-align:center}
+    .section-heading h2{margin:0;color:var(--green-dark);font-size:clamp(1.65rem,3.2vw,2.35rem);line-height:1.25}
+    .section-heading p{margin:10px 0 0;color:var(--muted)}
+    .festival-section{position:relative;margin:0 0 24px;padding:clamp(20px,3.5vw,32px);overflow:hidden;background:var(--card);border:1px solid var(--line);border-left:5px solid var(--green);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .section-top{display:flex;align-items:center;gap:16px;margin-bottom:20px}
+    .section-number{display:grid;flex:0 0 48px;place-items:center;width:48px;height:48px;color:white;background:var(--green-dark);border-radius:50%;font-weight:750}
+    .section-title{min-width:0;margin:0;color:var(--green-dark);font-size:clamp(1.2rem,2.5vw,1.55rem);line-height:1.3}
+    .room{display:inline-flex;margin:0 0 18px 64px;padding:5px 11px;color:var(--green-dark);background:var(--green-light);border-radius:999px;font-size:.92rem;font-weight:650}
+    .info-block{margin:0 0 20px 64px}
+    .info-label{display:block;margin-bottom:4px;color:var(--muted);font-size:.78rem;font-weight:750;letter-spacing:.06em;text-transform:uppercase}
+    .info-value{margin:0;font-weight:600}
+    .projects-title{margin:24px 0 12px;padding-top:18px;color:var(--green-dark);border-top:1px solid var(--line);font-size:1.08rem}
+    .project{padding:17px 18px;background:#FAFCFA;border:1px solid var(--line);border-radius:12px}
+    .project h4{margin:0 0 12px;color:var(--text);font-size:1.05rem}
+    .project-meta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 18px}
+    .project-meta p{margin:0;font-size:.94rem}
+    .project-meta strong{color:var(--muted);font-weight:600}
+    footer{padding:22px 18px;color:#E5EFE7;background:var(--green-dark);text-align:center;font-size:.9rem}
+    footer p{margin:0}
+    @media(max-width:640px){main{width:min(100% - 24px,1120px);padding:30px 0 48px}.section-top{align-items:flex-start;gap:12px}.section-number{flex-basis:42px;width:42px;height:42px}.room,.info-block{margin-left:0}.project-meta{grid-template-columns:1fr;gap:8px}.festival-section{border-left-width:4px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Муниципальное мероприятие · 2026</p>
+      <h1>Муниципальный фестиваль ученических и учительских проектов «Росток 2026»</h1>
+      <p class="hero-subtitle">Пространство идей, исследований и творчества</p>
+    </div>
+  </header>
+  <main>
+    <div class="section-heading">
+      <h2>Программа фестиваля</h2>
+      <p>Информация о секциях и проектах</p>
+    </div>
+
+    <section class="festival-section" aria-label="Шаблон оформления секции">
+      <div class="section-top">
+        <span class="section-number" aria-hidden="true">—</span>
+        <h3 class="section-title">Секция № —. —</h3>
+      </div>
+      <div class="room">Кабинет: —</div>
+      <div class="info-block">
+        <span class="info-label">Руководитель секции</span>
+        <p class="info-value">—</p>
+      </div>
+      <h4 class="projects-title">Проекты секции</h4>
+      <div class="project">
+        <h4>—</h4>
+        <div class="project-meta">
+          <p><strong>Автор:</strong> —</p>
+          <p><strong>Класс:</strong> —</p>
+          <p><strong>Школа:</strong> —</p>
+          <p><strong>Руководитель проекта:</strong> —</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><p>Муниципальный фестиваль ученических и учительских проектов «Росток 2026»</p></footer>
+</body>
+</html>
