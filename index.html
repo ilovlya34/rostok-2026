@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#24583D">
+  <meta name="description" content="Программа муниципального фестиваля ученических и учительских проектов «Росток 2026».">
+  <title>Росток 2026 — Программа фестиваля</title>
+  <style>
+    :root {
+      --green-dark: #24583D;
+      --green: #3F7952;
+      --page: #F5F7F5;
+      --white: #FFFFFF;
+      --green-light: #EAF2EA;
+      --text: #26332B;
+      --muted: #68756C;
+      --line: #DCE6DD;
+      --shadow: 0 10px 28px rgba(36, 88, 61, .08);
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--text);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    .site-header {
+      background: linear-gradient(125deg, var(--green-dark), var(--green));
+      color: var(--white);
+      padding: 34px 20px 38px;
+    }
+    .header-inner, main, .site-footer-inner {
+      width: min(1080px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: rgba(255,255,255,.78);
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    h1 {
+      max-width: 850px;
+      margin: 0;
+      font-size: clamp(1.65rem, 4vw, 2.65rem);
+      line-height: 1.2;
+      font-weight: 750;
+      letter-spacing: -.025em;
+    }
+    .header-subtitle {
+      margin: 14px 0 0;
+      max-width: 700px;
+      color: rgba(255,255,255,.86);
+      font-size: 1rem;
+    }
+
+    main { padding: 30px 0 54px; }
+    .venue {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      margin: 0 0 34px;
+      padding: 17px 20px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      box-shadow: var(--shadow);
+    }
+    .venue-mark {
+      display: grid;
+      place-items: center;
+      flex: 0 0 42px;
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: var(--green-light);
+      color: var(--green-dark);
+      font-size: 1.2rem;
+    }
+    .venue-label {
+      display: block;
+      color: var(--muted);
+      font-size: .82rem;
+      font-weight: 600;
+    }
+    .venue-value { display: block; font-weight: 750; font-size: 1.05rem; }
+
+    .section-heading { margin: 0 0 20px; }
+    .section-heading h2 {
+      margin: 0;
+      color: var(--green-dark);
+      font-size: clamp(1.55rem, 3vw, 2rem);
+      line-height: 1.25;
+    }
+    .section-heading p { margin: 8px 0 0; color: var(--muted); }
+
+    .sections {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+    .section-card {
+      overflow: hidden;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .section-card-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 18px 22px;
+      background: var(--green-light);
+      border-bottom: 1px solid var(--line);
+    }
+    .section-number {
+      display: grid;
+      place-items: center;
+      flex: 0 0 42px;
+      width: 42px;
+      height: 42px;
+      border-radius: 13px;
+      background: var(--green-dark);
+      color: var(--white);
+      font-size: 1rem;
+      font-weight: 800;
+    }
+    .section-card-header h3 {
+      margin: 0;
+      color: var(--green-dark);
+      font-size: 1.15rem;
+      line-height: 1.3;
+    }
+    .section-card-body { padding: 20px 22px 22px; }
+    .details {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px 24px;
+      margin: 0;
+    }
+    .detail { min-width: 0; }
+    .detail dt {
+      margin: 0 0 3px;
+      color: var(--muted);
+      font-size: .82rem;
+      font-weight: 600;
+    }
+    .detail dd {
+      margin: 0;
+      color: var(--text);
+      font-weight: 650;
+      overflow-wrap: anywhere;
+    }
+    .projects {
+      margin-top: 21px;
+      padding-top: 17px;
+      border-top: 1px solid var(--line);
+    }
+    .projects h4 {
+      margin: 0 0 9px;
+      color: var(--green-dark);
+      font-size: .98rem;
+    }
+    .empty-note {
+      margin: 0;
+      padding: 12px 14px;
+      border-radius: 11px;
+      background: #F7F9F7;
+      color: var(--muted);
+      font-size: .94rem;
+    }
+
+    .site-footer {
+      padding: 24px 20px;
+      background: #203F2E;
+      color: rgba(255,255,255,.88);
+    }
+    .site-footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px 24px;
+      flex-wrap: wrap;
+      font-size: .9rem;
+    }
+    .site-footer p { margin: 0; }
+
+    @media (min-width: 760px) {
+      .sections { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .section-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
+    }
+    @media (max-width: 560px) {
+      .header-inner, main, .site-footer-inner { width: min(100% - 28px, 1080px); }
+      .site-header { padding: 28px 0 32px; }
+      main { padding-top: 22px; }
+      .details { grid-template-columns: 1fr; gap: 12px; }
+      .section-card-header { padding: 16px; }
+      .section-card-body { padding: 17px 16px 19px; }
+      .venue { padding: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <p class="eyebrow">Муниципальный фестиваль · 2026</p>
+      <h1>Муниципальный фестиваль ученических и учительских проектов «Росток 2026»</h1>
+      <p class="header-subtitle">Официальная программа фестиваля</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="venue" aria-label="Место проведения">
+      <div class="venue-mark" aria-hidden="true">⌖</div>
+      <div>
+        <span class="venue-label">Место проведения</span>
+        <span class="venue-value">Актовый зал</span>
+      </div>
+    </section>
+
+    <section aria-labelledby="program-title">
+      <div class="section-heading">
+        <h2 id="program-title">Программа фестиваля</h2>
+        <p>Сведения о секциях и проектах будут уточняться по мере поступления материалов.</p>
+      </div>
+
+      <div class="sections">
+        <article class="section-card">
+          <div class="section-card-header">
+            <span class="section-number" aria-label="Секция номер 1">1</span>
+            <h3>Секция № 1</h3>
+          </div>
+          <div class="section-card-body">
+            <dl class="details">
+              <div class="detail"><dt>Название секции</dt><dd>—</dd></div>
+              <div class="detail"><dt>Кабинет</dt><dd>—</dd></div>
+              <div class="detail"><dt>ФИО руководителя секции</dt><dd>—</dd></div>
+              <div class="detail"><dt>Должность руководителя</dt><dd>—</dd></div>
+              <div class="detail"><dt>Место работы руководителя</dt><dd>—</dd></div>
+            </dl>
+            <div class="projects">
+              <h4>Проекты</h4>
+              <p class="empty-note">Программа будет добавлена после предоставления материалов.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="section-card">
+          <div class="section-card-header">
+            <span class="section-number" aria-label="Секция номер 2">2</span>
+            <h3>Секция № 2</h3>
+          </div>
+          <div class="section-card-body">
+            <dl class="details">
+              <div class="detail"><dt>Название секции</dt><dd>—</dd></div>
+              <div class="detail"><dt>Кабинет</dt><dd>—</dd></div>
+              <div class="detail"><dt>ФИО руководителя секции</dt><dd>—</dd></div>
+              <div class="detail"><dt>Должность руководителя</dt><dd>—</dd></div>
+              <div class="detail"><dt>Место работы руководителя</dt><dd>—</dd></div>
+            </dl>
+            <div class="projects">
+              <h4>Проекты</h4>
+              <p class="empty-note">Программа будет добавлена после предоставления материалов.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="section-card">
+          <div class="section-card-header">
+            <span class="section-number" aria-label="Секция номер 3">3</span>
+            <h3>Секция № 3</h3>
+          </div>
+          <div class="section-card-body">
+            <dl class="details">
+              <div class="detail"><dt>Название секции</dt><dd>—</dd></div>
+              <div class="detail"><dt>Кабинет</dt><dd>—</dd></div>
+              <div class="detail"><dt>ФИО руководителя секции</dt><dd>—</dd></div>
+              <div class="detail"><dt>Должность руководителя</dt><dd>—</dd></div>
+              <div class="detail"><dt>Место работы руководителя</dt><dd>—</dd></div>
+            </dl>
+            <div class="projects">
+              <h4>Проекты</h4>
+              <p class="empty-note">Программа будет добавлена после предоставления материалов.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <p>Муниципальный фестиваль ученических и учительских проектов «Росток 2026»</p>
+      <p>Место проведения: Актовый зал</p>
+    </div>
+  </footer>
+</body>
+</html>
